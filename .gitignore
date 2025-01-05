@@ -3,8 +3,9 @@
 !.gitignore
 !iso
 !link.ld
-!loader.o
 !loader.s
 !os.iso
 !README.md
 !qemusrc.txt
+!Makefile
+!kmain.c
