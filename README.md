@@ -4,10 +4,13 @@ A small operating system I wrote following this guide:
 https://littleosbook.github.io/
 
 ### Setup
+#### WSL
+
+#### QEMU
+
 
 ### Running
-
-###### Generate Image:
+##### Generate Image:
 genisoimage -R                              \
             -b boot/grub/stage2_eltorito    \
             -no-emul-boot                   \
@@ -19,7 +22,8 @@ genisoimage -R                              \
             -o os.iso                       \
             iso
 
-###### Run os.iso 
-qemu-system-x86_64 -f bochsrc.txt -D ./qemu-debug-log.txt -boot d -cdrom os.iso -m 4 -monitor stdio
+##### Run os.iso 
+qemu-system-x86_64 -d cpu -D logQ.txt -boot d -cdrom os.iso -m 4 -monitor stdio
 
 ### WSL
+
